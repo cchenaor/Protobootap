@@ -11,11 +11,11 @@ import org.springframework.test.context.DynamicPropertySource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-//Pruebas de integración
+//Pruebas de integració
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class HttpRequestTest {
 
-    @DynamicPropertySource
+    @LocalServerPort
     private int port;
 
     @Autowired
