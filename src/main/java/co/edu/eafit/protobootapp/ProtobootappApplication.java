@@ -32,7 +32,7 @@ public class ProtobootappApplication {
     
     //Se ejecuta con http://localhost:8080/cuadrado o http://localhost:8080/cuadrado?numero=5
     @GetMapping("/cuadrado")
-    public Strng cuadrado(@RequestParam(value = "numero", defaultValue = "0") Double numero) {
+    public String cuadrado(@RequestParam(value = "numero", defaultValue = "0") Double numero) {
         this.calculadora = new Calculadora();
         return String.format("El cuadrado de %f es %f", numero, this.calculadora.cuadrado(numero));
     }
